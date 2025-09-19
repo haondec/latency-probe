@@ -5,18 +5,18 @@
   "enable_latency_history": false,
   "targets": [
     {
-      "name": "echo-websocket-icmp",
+      "name": "echo.websocket.org",
       "kind": "icmp",
       "host": "echo.websocket.org"
     },
     {
-      "name": "echo-websocket-tcpconnect",
+      "name": "echo.websocket.org",
       "kind": "tcpconnect",
       "host": "echo.websocket.org",
       "port": 443
     },
     {
-      "name": "echo-websocket-http",
+      "name": "echo.websocket.org",
       "kind": "http",
       "host": "https://echo.websocket.org",
       "port": 443
