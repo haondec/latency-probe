@@ -19,7 +19,7 @@ async fn main() -> anyhow::Result<()> {
     let config_mgr = Arc::new(ConfigManager::start().await?);
     let log_level = config_mgr.config.read().await.get_tracing_level()?;
 
-    println!("Starting latency_probe");
+    println!("Starting latency-probe");
 
     // Initialize metrics based on configuration
     let enable_latency_history = config_mgr.config.read().await.enable_latency_history;
@@ -34,7 +34,7 @@ async fn main() -> anyhow::Result<()> {
     // Init tracing with configured log level
     tracing_subscriber::fmt()
         .with_env_filter(tracing_subscriber::EnvFilter::from_default_env()
-                         .add_directive(format!("latency_probe={}", log_level.as_str().to_lowercase()).parse()?))
+                         .add_directive(format!("latency-probe={}", log_level.as_str().to_lowercase()).parse()?))
         .init();
 
     // Start metrics endpoint
