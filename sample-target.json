@@ -1,0 +1,25 @@
+{
+  "probe_interval_ms": 5000,
+  "default_timeout_ms": 3000,
+  "log_level": "error",
+  "enable_latency_history": false,
+  "targets": [
+    {
+      "name": "echo-websocket-icmp",
+      "kind": "icmp",
+      "host": "echo.websocket.org"
+    },
+    {
+      "name": "echo-websocket-tcpconnect",
+      "kind": "tcpconnect",
+      "host": "echo.websocket.org",
+      "port": 443
+    },
+    {
+      "name": "echo-websocket-http",
+      "kind": "http",
+      "host": "https://echo.websocket.org",
+      "port": 443
+    }
+  ]
+}

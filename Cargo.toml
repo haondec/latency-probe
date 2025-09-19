@@ -1,0 +1,26 @@
+[package]
+name = "latency_probe"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.47.1", features = ["full", "rt-multi-thread", "net"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.12.23", features = ["rustls-tls"] }
+prometheus = "0.14"
+warp = { version = "0.4.2", features = ["server"] }
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.20", features = ["fmt", "env-filter", "json"] }
+anyhow = "1.0.99"
+aws-config = "1.8.6"
+aws-sdk-appconfigdata = "1.84.0"
+socket2 = "0.6.0"
+trust-dns-resolver = { version = "0.23.2", default-features = false, features = ["tokio-runtime"] }
+once_cell = "1.21.3"
+libc = "0.2.175"
+surge-ping = "0.8.2"
+
+# Optional / feature flags for raw sockets, timestamping
+# Might require nightly or unsafe
+# Maintainers: github.com/haondec
